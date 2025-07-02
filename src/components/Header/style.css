@@ -1,0 +1,67 @@
+header {
+    padding: 20px 0;
+}
+
+
+header > .flex {
+    align-items: center;
+    justify-content: space-between;
+}   
+
+
+header .input-field {
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #000;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+
+header .input-field input {
+    border: none;
+    width: 90%;
+    background: transparent;
+    outline: none;
+}
+
+
+header .user-profile {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+header .user-profile .icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+header .user-profile .txt h5 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+header .user-profile .txt h6 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+header .mode {
+    font-size: 25px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+header .center {
+    align-items: center;
+    gap: 50px;
+}

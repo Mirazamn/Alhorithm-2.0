@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "Title": "What is Front-End Development?",
+    "paragraph": "Front-end development focuses on the user-facing side of a website or application. It's everything a user sees and interacts with in their browser, built using HTML, CSS, and JavaScript."
+  },
+  {
+    "id": "2",
+    "Title": "HTML: The Structure of the Web",
+    "paragraph": "HyperText Markup Language (HTML) is the standard language for creating web pages. It provides the fundamental structure and content of a site, using elements like headings, paragraphs, images, and links."
+  },
+  {
+    "id": "3",
+    "Title": "CSS: Styling the Web",
+    "paragraph": "Cascading Style Sheets (CSS) is used to control the presentation, formatting, and layout of web pages. It dictates colors, fonts, spacing, and the overall visual appearance of the HTML content."
+  },
+  {
+    "id": "4",
+    "Title": "JavaScript: Making the Web Interactive",
+    "paragraph": "JavaScript is a programming language that enables dynamic and interactive features on websites. It's used for everything from simple animations to complex single-page applications."
+  },
+  {
+    "id": "5",
+    "Title": "Responsive Web Design",
+    "paragraph": "Responsive Web Design is an approach that makes web pages render well on a variety of devices and window or screen sizes. It primarily uses CSS media queries to adapt the layout."
+  },
+  {
+    "id": "6",
+    "Title": "The DOM (Document Object Model)",
+    "paragraph": "The DOM is a programming interface for web documents. It represents the page so that programs (like JavaScript) can change the document structure, style, and content."
+  },
+  {
+    "id": "7",
+    "Title": "Version Control with Git",
+    "paragraph": "Git is a distributed version control system used to track changes in source code during software development. It's essential for collaboration and managing project history."
+  },
+  {
+    "id": "8",
+    "Title": "APIs and AJAX/Fetch",
+    "paragraph": "APIs (Application Programming Interfaces) allow different software applications to communicate with each other. The Fetch API or AJAX is used by front-end JavaScript to request data from a server without a full page reload."
+  },
+  {
+    "id": "9",
+    "Title": "React.js: A Component-Based Library",
+    "paragraph": "Developed by Facebook, React is a popular JavaScript library for building user interfaces. It allows developers to create reusable UI components, making it efficient to build and manage complex applications."
+  },
+  {
+    "id": "10",
+    "Title": "Angular: A Platform and Framework",
+    "paragraph": "Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google. It's a comprehensive solution for building large-scale, single-page applications."
+  },
+  {
+    "id": "11",
+    "Title": "Vue.js: The Progressive Framework",
+    "paragraph": "Vue.js is an approachable, versatile, and performant JavaScript framework. It's designed to be incrementally adoptable, making it easy to integrate with other projects or libraries."
+  },
+  {
+    "id": "12",
+    "Title": "CSS Preprocessors (Sass/LESS)",
+    "paragraph": "CSS preprocessors like Sass or LESS are scripting languages that extend the default capabilities of CSS. They add features like variables, nesting, and mixins to make stylesheets more maintainable."
+  },
+  {
+    "id": "13",
+    "Title": "Package Managers (npm/Yarn)",
+    "paragraph": "Package managers automate the process of installing, upgrading, configuring, and removing computer programs. For front-end, npm (Node Package Manager) and Yarn are used to manage project dependencies."
+  },
+  {
+    "id": "14",
+    "Title": "Module Bundlers (Webpack/Vite)",
+    "paragraph": "Module bundlers like Webpack or Vite take your JavaScript modules and their dependencies and generate one or more bundled files that can be loaded in the browser. They also handle optimizations and asset processing."
+  },
+  {
+    "id": "15",
+    "Title": "Web Accessibility (a11y)",
+    "paragraph": "Web accessibility (often abbreviated as a11y) is the inclusive practice of ensuring there are no barriers that prevent interaction with, or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic restrictions on bandwidth and speed."
+  },
+  {
+    "id": "16",
+    "Title": "State Management (Redux/Zustand)",
+    "paragraph": "In large applications, managing the 'state' (data that changes over time) can become complex. State management libraries like Redux or Zustand provide a predictable state container for JavaScript apps."
+  },
+  {
+    "id": "17",
+    "Title": "Front-End Testing",
+    "paragraph": "Testing in the front-end ensures that the user interface works as expected. This includes unit tests for individual functions (using Jest), and end-to-end (E2E) tests that simulate user behavior (using Cypress or Playwright)."
+  },
+  {
+    "id": "18",
+    "Title": "TypeScript: JavaScript with Syntax for Types",
+    "paragraph": "TypeScript is an open-source language which builds on JavaScript by adding static type definitions. Types provide a way to describe the shape of an object, providing better documentation and allowing TypeScript to spot bugs as you write the code."
+  },
+  {
+    "id": "19",
+    "Title": "Web Performance Optimization",
+    "paragraph": "Web performance refers to the speed at which web pages are downloaded and displayed on the user's web browser. Optimization techniques include image compression, code minification, and leveraging browser caching."
+  },
+  {
+    "id": "20",
+    "Title": "CSS Frameworks (Bootstrap/Tailwind CSS)",
+    "paragraph": "CSS frameworks provide a collection of pre-written CSS to help build responsive websites faster. Bootstrap offers pre-styled components, while Tailwind CSS provides low-level utility classes to build custom designs."
+  },
+  {
+    "id": "21",
+    "Title": "Static Site Generators (Next.js/Gatsby)",
+    "paragraph": "Static Site Generators (SSGs) pre-build web pages into static HTML files during a build process. This results in highly performant and secure websites, often used for blogs, portfolios, and documentation."
+  }
+]
