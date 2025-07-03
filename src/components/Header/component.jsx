@@ -1,5 +1,5 @@
 import './style.css'
-import Logo from '../../assets/alhorethm.svg'
+import Logo from '../../assets/parlare.svg'
 
 import { FaUserCircle } from 'react-icons/fa';
 import { IoIosSearch } from "react-icons/io";
