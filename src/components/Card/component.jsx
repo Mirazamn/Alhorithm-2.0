@@ -35,7 +35,7 @@ function Card({ title, paragraph, id, onSelect }) {
     <div className='card-wrapper flex'>
       <Link to={`/article/${id}`} className="card">
         <h1>{title}</h1>
-        <p>{TextCleaner(paragraph).length > 50 ? <>{TextCleaner(paragraph).slice(0, 60).join(" ")}...<span className='more'>More</span></> : paragraph}</p>
+        <p>{TextCleaner(paragraph).length > 20 ? <>{TextCleaner(paragraph).slice(0, 20).join(" ")}...<span className='more'>More</span></> : paragraph}</p>
       </Link>
 
       <Space className='select' direction="vertical" onChange={handleChange}>
