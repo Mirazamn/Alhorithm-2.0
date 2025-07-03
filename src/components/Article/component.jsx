@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './style.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { IoChevronBack } from "react-icons/io5";
 
 import * as React from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -33,6 +34,9 @@ function Article() {
 
   return (  
     <div key={article.id} className="container article flex">
+      <header>
+        <Link className='icon' to={`/`}><IoChevronBack /></Link>
+      </header>
      <h1>{article.Title}</h1>
      <p>{article.paragraph}</p> 
     </div>
@@ -40,24 +44,6 @@ function Article() {
 }
 
 export default Article;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 export function ArticleTemplate() {

@@ -3,6 +3,11 @@ header {
 }
 
 
+header .menu {
+    display: none;
+}
+
+
 header > .flex {
     align-items: center;
     justify-content: space-between;
@@ -64,4 +69,32 @@ header .mode {
 header .center {
     align-items: center;
     gap: 50px;
+}
+
+
+@media (max-width: 500px) {
+    header .menu {
+        display: inline-block;
+        font-size: 30px;
+    }
+
+
+    header .center {
+        display: none;
+    }
+
+
+    header > .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    header .wrapper {
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
 }

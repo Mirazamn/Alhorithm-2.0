@@ -50,3 +50,15 @@
 .select {
     height: 60px;
 }
+
+
+@media (max-width: 500px) {
+    .card-wrapper {
+        height: 250px;    
+    }
+
+
+    .button {
+        height: 100px !important;
+    }
+}

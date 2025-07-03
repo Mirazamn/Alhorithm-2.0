@@ -58,6 +58,7 @@ function Card({ title, paragraph, id, onSelect }) {
                 justifyContent: 'center',
                 padding: 0
               }}
+              className='button'
               type="text">
               <FiMoreVertical size={24} />
             </Button>

@@ -5,6 +5,8 @@ import { FaUserCircle } from 'react-icons/fa';
 import { IoIosSearch } from "react-icons/io";
 import { IoMoon, IoSunnySharp } from "react-icons/io5";
 import { useState } from 'react';
+import { RiMenu3Fill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 
 function Header({ SearchValue }) {
@@ -21,11 +23,14 @@ function Header({ SearchValue }) {
   return (
     <header>
         <div className="container flex">
-            <img src={Logo} alt="Logo" width="250px" />
+            <Link className='logo' to={`/`}><img src={Logo} alt="Logo" width="250px" /></Link>
             
-            <div className="input-field flex">
-                <input type="text" name="" id="" placeholder='Search...' value={search} onChange={SearchChange}/>
-                <IoIosSearch className='icon'/>
+            <div className="flex wrapper">
+                <div className="input-field flex">
+                    <input type="text" name="" id="" placeholder='Search...' value={search} onChange={SearchChange}/>
+                    <IoIosSearch className='icon'/>
+                </div>
+                <RiMenu3Fill className='menu'/>
             </div>
 
             <div className='flex center'>
