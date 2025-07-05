@@ -33,7 +33,7 @@ export function Login() {
 
     // userInfo Search
       const Enter = () => {
-        const user = users.find((u) => u.username && u.password)
+        const user = users.find((u) => u.username === username && u.password === password)
 
         if (user) {
           localStorage.setItem('username', user.username)
