@@ -65,7 +65,7 @@ function Blog({ SearchValue, articleTemplate }) {
         </div>
       </div>
       <div className="container cards flex">
-        {articles.filter(article => article.Title.toLowerCase().includes(SearchValue.toLowerCase())).slice(0, 18).map((article)=> {
+        {articles.filter(article => article.Title.toLowerCase().includes(SearchValue.toLowerCase())).map((article)=> {
           return ( 
               <Card 
                 id={article.id} 

@@ -32,7 +32,9 @@ export function Login() {
     }, [])
 
     // userInfo Search
-      const Enter = () => {
+      const Enter = (event) => {
+        event.preventDefault();
+
         const user = users.find((u) => u.username === username && u.password === password)
 
         if (user) {
@@ -41,6 +43,13 @@ export function Login() {
         } else {
           return alert('User not defined')
         }
+      }
+
+
+      const user = localStorage.getItem('username')
+
+      if (user) {
+        navigate('/')
       }
 
       // userInfo Search
@@ -73,17 +82,22 @@ export function Login() {
                             onChange={(e) => setUsername(e.target.value)}
                             id="standard-multiline-flexible"
                             label="Username"
+                            value={username}
                             variant="standard"
                             InputProps={{
                                 style: { color: '#fafafa' },
+                                startAdornment: (
+                                  <InputAdornment position='start'>@</InputAdornment>
+                                ),
                                 endAdornment: (
-                                    <InputAdornment position="end">
-                                      <PersonIcon />
-                                    </InputAdornment>
-                                  )
+                                      <InputAdornment position="end">
+                                        <PersonIcon />
+                                      </InputAdornment>
+                                )
                             }}
                             style={{width: 250}}/>
                         </div>
+
                         <div>
                           <FormControl
                           style={{
@@ -121,6 +135,7 @@ export function Login() {
                         <h6>Forgot Password?</h6>
                     </div>
                     <button 
+                      type='button'
                       className='login'
                       onClick={Enter}>Login</button>
                     <p>Don't have an account? <Link to={`/sign-up`}><span>Sign Up</span></Link></p> 
@@ -182,18 +197,19 @@ export function SignUp() {
     }, [])
     
 
-    const AddUser = () => {
+    const AddUser = (e) => {
+      e.preventDefault();
+
       if (data.find(u => u.username === username)) {
         alert("This username is already taken!");
-        return;
+        // return;
       }
     
       const user = {
-        name,
-        surname,
-        username,
-        password,
-        id: data.length + 1
+        name: name,
+        surname: surname,
+        username: username,
+        password: password
       };
     
       fetch('https://6868e3e1d5933161d70cc045.mockapi.io/users', {
@@ -203,7 +219,9 @@ export function SignUp() {
       })
       .then((res) => res.json())
       .then((res) => console.log('user successfully added: ', res)) 
-      .then(() => localStorage.setItem('username', username))
+      .then(() => {
+        localStorage.setItem('username', username)
+        navigate('/')})
       .catch((err) => console.log(err));
 
       navigate('/')
@@ -214,6 +232,7 @@ export function SignUp() {
       <section className='register signup'>
             <div className="container flex">
                     <Box 
+                    onSubmit={AddUser}
                     component="form"
                     className='form'
                     sx={{ display: 'flex', flexDirection: 'column',  flexWrap: 'wrap' }}
@@ -333,13 +352,13 @@ export function SignUp() {
                         </div>
 
                         <button 
-                          type='button'
-                          className='login'
-                          onClick={AddUser}>Sign Up</button>
+                          type='submit'
+                          className='login'>Sign Up</button>
                         <p>Already have an account? <Link to={`/log-in`}><span>Log In</span></Link></p>
                         {/* /Password */}
                     </Box>
             </div>
         </section>
   )
-}
+}  
+// ruscha bol simsim kuf suf 
