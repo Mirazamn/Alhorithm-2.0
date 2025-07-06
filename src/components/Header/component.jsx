@@ -9,12 +9,14 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { Link, useNavigate } from 'react-router-dom';
 import { Skeleton } from '@mui/material';
 import axios from 'axios';
+import Modal from '../Modal/component';
 
 
 function Header({ SearchValue }) {
     const [mode, SetMode] = useState('light')
     const [search, setSeach] = useState('')
     const [users, setUsers] = useState([])
+    const [isOpen, setOpen] = useState(false)
     const navigate = useNavigate()
     const localUser = localStorage.getItem('username');
 
@@ -60,7 +62,7 @@ function Header({ SearchValue }) {
                     {mode === 'light' ? <IoMoon onClick={()=> SetMode('dark')}/>: <IoSunnySharp onClick={()=> SetMode('light')}/>}
                 </div>
 
-                <div className="user-profile flex">
+                <div onClick={()=> setOpen(true)} className="user-profile flex">
                     <FaUserCircle className='icon'/>
                     {!user ? 
                     (<span>
@@ -73,6 +75,8 @@ function Header({ SearchValue }) {
                         <h6>@{user?.username}</h6>
                     </div>)}
                 </div>
+
+                {isOpen === true ? <Modal onOpen={isOpen} onClose={()=> setOpen(false)}/> : null}
             </div>
         </div>
     </header>
