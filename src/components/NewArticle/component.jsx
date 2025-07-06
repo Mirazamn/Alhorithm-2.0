@@ -7,6 +7,14 @@ function NewArticle() {
   const [title, setTitle] = useState('Title here...')
   const [paragraph, setParagraph] = useState('Paragraph here...')
   const [data, setData] = useState([])
+  const localUser = localStorage.getItem('username')
+
+  // Date
+  const today = new Date();
+
+  const day = today.getDate();
+  const month = today.getMonth() + 1
+  const year = today.getFullYear()
 
   useEffect(()=> {
     axios
@@ -15,9 +23,10 @@ function NewArticle() {
   }, [])
 
     const article = {
-      "id": data.length +1,
       "Title": title,
-      "paragraph": paragraph
+      "paragraph": paragraph,
+      "author": localUser,
+      "date": `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}`: month}.${year}`
     }
 
     const TitleChange = (e) => {

@@ -37,6 +37,7 @@ function Article() {
       <header>
         <Link className='icon' to={`/`}><IoChevronBack /></Link>
       </header>
+      <p className='details'><em>@{article.author}</em> - <span>{article.date}</span></p>
      <h1>{article.Title}</h1>
      <p>{article.paragraph}</p> 
     </div>
@@ -56,8 +57,8 @@ export function ArticleTemplate() {
     axios
     .get('https://6864005688359a373e972948.mockapi.io/Posts')
     .then(res => {
-      console.log("Fetched posts:", res.data); // <-- bu
-      console.log("URL id:", id); // <-- bu
+      console.log("Fetched posts:", res.data);
+      console.log("URL id:", id);
       setPosts(res.data)
     })
   }, [])

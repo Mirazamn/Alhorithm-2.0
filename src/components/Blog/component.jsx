@@ -71,6 +71,8 @@ function Blog({ SearchValue, articleTemplate }) {
                 id={article.id} 
                 key={article.id} 
                 title={article.Title} 
+                author={article.author}
+                date={article.date}
                 paragraph={article.paragraph}
                 onSelect={(id, value) => {
                   if (value === 'delete') {
@@ -78,8 +80,6 @@ function Blog({ SearchValue, articleTemplate }) {
                     DeletePost(article.id);
                   } else if (value === 'edit') {
                     navigate(`/article/${article.id}/edit`);
-                  } else {
-                    console.log('Everything OK!');
                   }
                 }}/>
           )
