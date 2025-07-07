@@ -72,6 +72,18 @@
     color: #727272;
 }
 
+.popular {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #0a0a0a;
+}
+
+
+.popular .icon:active {
+    color: #D70040;
+}
+
 
 @media (max-width: 500px) {
     .card-wrapper {

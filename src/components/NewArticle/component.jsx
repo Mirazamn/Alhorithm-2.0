@@ -4,8 +4,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function NewArticle() {
-  const [title, setTitle] = useState('Title here...')
-  const [paragraph, setParagraph] = useState('Paragraph here...')
+  const [title, setTitle] = useState('')
+  const [paragraph, setParagraph] = useState('')
   const [data, setData] = useState([])
   const localUser = localStorage.getItem('username')
 
@@ -26,6 +26,7 @@ function NewArticle() {
       "Title": title,
       "paragraph": paragraph,
       "author": localUser,
+      "Likes": 0,
       "date": `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}`: month}.${year}`
     }
 
@@ -58,10 +59,10 @@ function NewArticle() {
     <main className='NewArticle'>
         <div className="contaianer flex">
             <h1>
-              <input type="text" className='title'  value={title} onChange={TitleChange} placeholder='Empty title'/>
+              <input type="text" className='title'  value={title} onChange={TitleChange} placeholder='Title here'/>
             </h1>
             <p>
-              <textarea rows="1" className="paragraph" value={paragraph} onChange={ParagraphChange} placeholder='Empty paragraph'></textarea>
+              <textarea rows="1" className="paragraph" value={paragraph} onChange={ParagraphChange} placeholder='Paragraph here'></textarea>
             </p>
             <div className="btn">
               <Link to="/" className='white' onClick={()=> PostData()}><button>Done</button></Link>

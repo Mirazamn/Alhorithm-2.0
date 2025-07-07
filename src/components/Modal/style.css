@@ -4,17 +4,22 @@
     padding: 10px;
     position: absolute;
     border-radius: 10px;
-    width: 150px;
+    height: 130px;
+    width: 200px;
     top: 68px;
     right: 180px;
     box-shadow: 0 0 15px #00000080;
 }
 
 
-.modal .container.flex {
+.modal .container.flex main {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100px;
+    gap: 5px;
+    position: relative;
 }
 
 
@@ -25,6 +30,10 @@
     margin: 0;
     cursor: pointer;
     font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
 }
 
 
@@ -33,6 +42,16 @@
     color: #fafafa;
     padding: 5px 10px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.modal .delete {
+    background: #A52A2A;
+    color: #fafafa;
+    border: none;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }

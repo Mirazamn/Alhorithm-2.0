@@ -15,11 +15,15 @@ function Blog({ SearchValue, articleTemplate }) {
 
   useEffect(()=> {
     axios
-    .get("https://6864005688359a373e972948.mockapi.io/Posts")
-    .then((res) => {
+      .get("https://6864005688359a373e972948.mockapi.io/Posts")
+      .then((res) => {
       setArticles(res.data)
       console.log('setArticles:', res.data);
     })}, [])
+
+    useEffect(()=> {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
 
 
   const DeletePost = (id) => {
@@ -28,6 +32,8 @@ function Blog({ SearchValue, articleTemplate }) {
       .then(()=> setArticles(prev => prev.filter(article => article.id !== id)))
       .catch((error) => alert('Error deleting post: ' + error))
   }
+
+  const sortedArticles = [...articles].sort((a, b) => b.Likes - a.Likes);
 
   if (articles.length == 0) {
     return (
@@ -65,7 +71,8 @@ function Blog({ SearchValue, articleTemplate }) {
         </div>
       </div>
       <div className="container cards flex">
-        {articles.filter(article => article.Title.toLowerCase().includes(SearchValue.toLowerCase())).map((article)=> {
+        {sortedArticles.filter(article => article.Title.toLowerCase().includes(SearchValue.toLowerCase()))
+        .map((article)=> {
           return ( 
               <Card 
                 id={article.id} 
@@ -74,6 +81,7 @@ function Blog({ SearchValue, articleTemplate }) {
                 author={article.author}
                 date={article.date}
                 paragraph={article.paragraph}
+                likes={article.Likes}
                 onSelect={(id, value) => {
                   if (value === 'delete') {
                     console.log('ID:', id);
@@ -82,8 +90,7 @@ function Blog({ SearchValue, articleTemplate }) {
                     navigate(`/article/${article.id}/edit`);
                   }
                 }}/>
-          )
-        })}
+          )})}
       </div>
     </section>
   )

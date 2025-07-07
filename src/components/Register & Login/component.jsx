@@ -227,6 +227,12 @@ export function SignUp() {
       navigate('/')
     };
 
+    const user = localStorage.getItem('username')
+
+    if (user) {
+      navigate('/')
+    }
+
 
   return (
       <section className='register signup'>
@@ -277,6 +283,9 @@ export function SignUp() {
                             value={surname}
                             InputProps={{
                                 style: { color: '#fafafa' },
+                                startAdornment: (
+                                  <InputAdornment position='start'>@</InputAdornment>
+                                ),
                                 endAdornment: (
                                     <InputAdornment position="end">
                                       <RememberMeIcon />
